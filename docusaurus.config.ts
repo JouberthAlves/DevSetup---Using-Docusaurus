@@ -9,6 +9,9 @@ const config: Config = {
 
   future: {
     v4: true,
+    faster: {
+      rspackPersistentCache: false,
+    },
   },
 
   url: "https://your-docusaurus-site.example.com",
