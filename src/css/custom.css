@@ -28,3 +28,83 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+
+.hero--primary {
+  background-color: #085EA4;
+}
+
+.setup-wizard {
+  display: block;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.hero--primary .button {
+  margin-top: 0.75rem;
+}
+
+.setup-wizard [data-part="window"],
+.setup-wizard [data-part="graphics"],
+.setup-wizard [data-part="character"],
+.setup-wizard [data-part="shadow"] {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.setup-wizard [data-part="window"] {
+  animation: wizard-float 4.5s ease-in-out infinite;
+}
+
+.setup-wizard [data-part="graphics"] {
+  animation: wizard-float 3.6s ease-in-out infinite 0.35s;
+}
+
+.setup-wizard [data-part="character"] {
+  animation: wizard-bob 5s ease-in-out infinite;
+}
+
+.setup-wizard [data-part="shadow"] {
+  animation: wizard-shadow 5s ease-in-out infinite;
+}
+
+@keyframes wizard-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes wizard-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes wizard-shadow {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.92);
+    opacity: 0.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .setup-wizard [data-part="window"],
+  .setup-wizard [data-part="graphics"],
+  .setup-wizard [data-part="character"],
+  .setup-wizard [data-part="shadow"] {
+    animation: none;
+  }
+}
