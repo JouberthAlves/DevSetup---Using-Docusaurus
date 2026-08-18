@@ -1,11 +1,11 @@
-import { themes as prismThemes } from "prism-react-renderer"
-import type { Config } from "@docusaurus/types"
-import type * as Preset from "@docusaurus/preset-classic"
+import {themes as prismThemes} from 'prism-react-renderer';
+import type {Config} from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: "DevSetup",
-  tagline: "Config your world.",
-  favicon: "img/logo.svg",
+  title: 'DevSetup',
+  tagline: 'Config your world.',
+  favicon: 'img/logo.svg',
 
   future: {
     v4: true,
@@ -14,29 +14,29 @@ const config: Config = {
     },
   },
 
-  url: "https://your-docusaurus-site.example.com",
-  baseUrl: "/",
+  url: 'https://your-docusaurus-site.example.com',
+  baseUrl: '/',
 
-  organizationName: "",
-  projectName: "my-first-docusaurus-app",
+  organizationName: '',
+  projectName: 'my-first-docusaurus-app',
 
-  onBrokenLinks: "throw",
+  onBrokenLinks: 'throw',
 
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
 
   presets: [
     [
-      "classic",
+      'classic',
       {
         docs: {
-          sidebarPath: "./sidebars.ts",
+          sidebarPath: './sidebars.ts',
         },
         blog: false,
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
     ],
@@ -48,30 +48,28 @@ const config: Config = {
     },
     navbar: {
       logo: {
-        alt: "DevSetup Logo",
-        src: "img/devsetup-logo.svg",
-        srcDark: "img/devsetup-logo-dark.svg",
+        alt: 'DevSetup Logo',
+        src: 'img/devsetup-logo.svg',
+        srcDark: 'img/devsetup-logo-dark.svg',
       },
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'docsSidebar',
+          position: 'left',
+          label: 'Docs',
+        },
+      ],
     },
     footer: {
-      style: "dark",
+      style: 'dark',
       copyright: `Copyright © ${new Date().getFullYear()} My Project. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-
-    items: [
-      {
-        type: "docSidebar",
-        sidebarId: "docsSidebar",
-        position: "left",
-        label: "Docs",
-      },
-      { to: "blog", label: "Blog", position: "left" },
-    ],
   } satisfies Preset.ThemeConfig,
-}
+};
 
-export default config
+export default config;
