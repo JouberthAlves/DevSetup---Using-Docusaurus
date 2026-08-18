@@ -14,7 +14,7 @@ A fresh Windows 11 install is not a blank slate. It ships Copilot, Xbox, inbox g
 This repo is that recipe, written down once and published as a static docs site. The docs are the product. Docusaurus is how they stay navigable.
 
 <p align="center">
-  <img src="./static/img/hero-sect.png" alt="DevSetup homepage hero" width="720" />
+  <img src="./static/img/hero-sect.png" alt="DevSetup homepage hero" width="920" />
 </p>
 
 ## What this is
