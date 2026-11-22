@@ -41,16 +41,16 @@ function HomeMain() {
         <div className="col text--center">
           <HandCoding className="feature-illu hand-coding" width={200} height={200} />
           <h2>Easy to configure</h2>
-          <p>It takes less than 10 minutes and saves hours of work.</p>
+          <p>From a blank disk to a working setup, one step at a time.</p>
         </div>
         <div className="col text--center">
           <CleanSetup className="feature-illu data-extraction" width={300} height={200} />
           <h2>Clean Setup</h2>
-          <p>No more AI propaganda in your setup.</p>
+          <p>No bundled AI, games or bloat in the OS.</p>
         </div>
         <div className="col text--center">
           <WebSiteCreator className="feature-illu website-creator" width={200} height={200} />
-          <h2>Accelarates your workflow</h2>
+          <h2>Accelerates your workflow</h2>
           <p>No distractions, just productivity.</p>
         </div>
       </div>

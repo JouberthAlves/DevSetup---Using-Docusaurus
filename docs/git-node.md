@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 6
 ---
 
 # Git & Node
@@ -8,8 +8,8 @@ Git from git-scm, SSH to GitHub, Node via nvm-windows (LTS), then pnpm and Bun a
 
 ## 1. Git
 
-1. Download the installer from [git-scm.com](https://git-scm.com/download/win)
-2. Next through the wizard (default editor and “Git from the command line” are fine)
+1. Install it with `winget install --id Git.Git -e` (done in [Apps](./apps.md)), or download the installer from [git-scm.com](https://git-scm.com/download/win)
+2. If you use the installer, next through the wizard (default editor and “Git from the command line” are fine)
 3. Open **Git Bash** or **Windows Terminal** and check:
 
 ```bash
@@ -73,7 +73,7 @@ You want a success message (or “successfully authenticated”). Clone with `gi
 
 ## 3. Node (nvm-windows)
 
-1. Install [nvm-windows](https://github.com/coreybutler/nvm-windows/releases) (`nvm-setup.exe`)
+1. Install [nvm-windows](https://github.com/coreybutler/nvm-windows/releases) (`winget install --id CoreyButler.NVMforWindows -e`, or `nvm-setup.exe`)
 2. Close and reopen the terminal
 3. Install and use **LTS**:
 
@@ -84,7 +84,14 @@ node -v
 npm -v
 ```
 
-Do not rely on a random “Current” Node from nodejs.org (for example Node 26). LTS is the default I keep.
+Do not grab whatever “Current” Node nodejs.org is promoting. The rule is **LTS**, whatever number that is today. Even-numbered releases become LTS in October, so a new major version is only safe once nodejs.org marks it LTS. `nvm install lts` always resolves the right one.
+
+Several versions side by side:
+
+```bash
+nvm list
+nvm use 22
+```
 
 ## 4. pnpm and Bun
 
@@ -110,3 +117,5 @@ This repo uses **pnpm**. Bun is there when I want it.
 - [ ] `ssh -T git@github.com` authenticates
 - [ ] `node -v` is an LTS
 - [ ] `pnpm -v` and `bun -v` print versions
+
+Next: [VS Code](./vscode.md).

@@ -18,7 +18,7 @@ const config: Config = {
   baseUrl: '/',
 
   organizationName: '',
-  projectName: 'my-first-docusaurus-app',
+  projectName: 'DevSetup---Using-Docusaurus',
 
   onBrokenLinks: 'throw',
 
@@ -63,11 +63,12 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} My Project. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} DevSetup. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['powershell', 'bash', 'json', 'ignore'],
     },
   } satisfies Preset.ThemeConfig,
 };
